@@ -36,21 +36,21 @@
 
   .card_small {
     grid-row-end: span var(--card_small);
-    background-image: url(https://picsum.photos/id/237/300);
+    // background-image: url(https://picsum.photos/id/237/300);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .card_medium {
     grid-row-end: span var(--card_medium);
-    background-image: url(https://picsum.photos//300?grayscale);
+    // background-image: url(https://picsum.photos//300?grayscale);
     background-size: cover;
     background-repeat: no-repeat
   }
 
   .card_large {
     grid-row-end: span var(--card_large);
-    background-image: url(https://picsum.photos/237/300);
+    // background-image: url(https://picsum.photos/237/300);
     background-size: cover;
     background-repeat: no-repeat
   }
