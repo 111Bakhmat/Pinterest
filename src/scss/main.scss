@@ -10,7 +10,7 @@
 .pin_container {
   margin: 0;
   padding-top: 80px;
-  width: 100vw;
+  width: 95vw;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -102,13 +102,19 @@
     justify-content: space-between;
     align-items: center;
 
+    .bottom-bar__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
     .bottom-bar__link-box {
       display: flex;
     }
 
     .bottom-bar__link-web {
       position: relative;
-      padding: 8.5px 5px 8.5px 30px;
+      padding: 8.5px 5px 8.5px 20px;
       background: #efefef;
       border-radius: 40px;
       cursor: pointer;
@@ -122,7 +128,7 @@
 
       &::before{
         position: absolute;
-        content: url("../images/link-hover-zone.svg");
+        content: '#';
         left: 13px;
         top: 8px;
       }

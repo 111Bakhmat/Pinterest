@@ -12,6 +12,7 @@ cardsSmall.innerHTML = `
     </div>
     <!-------------------->
     <div class="bottom-bar">
+    <img class="bottom-bar__avatar" alt="ava">
         <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
         <div class="bottom-bar__link-box">
             <a class="bottom-bar__link-download" href="#">
@@ -49,6 +50,7 @@ cardsMedium.innerHTML = `
             </div>
             <!-------------------->
             <div class="bottom-bar">
+            <img class="bottom-bar__avatar" alt="ava">
                 <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
                 <div class="bottom-bar__link-box">
                     <a class="bottom-bar__link-download" href="#">
@@ -86,6 +88,7 @@ cardsLarge.innerHTML = `
         </div>
         <!-------------------->
         <div class="bottom-bar">
+        <img class="bottom-bar__avatar" alt="ava">
             <a class="bottom-bar__link-web" href="#">lorem ipsum dolor.</a>
             <div class="bottom-bar__link-box">
                 <a class="bottom-bar__link-download" href="#">
