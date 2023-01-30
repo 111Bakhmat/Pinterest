@@ -13,8 +13,9 @@ body {
   font-family: arial, sans-serif;
 }
 
-html, body {
-  height: 100%
+html,
+body {
+  height: 100%;
 }
 
 button {
@@ -22,7 +23,7 @@ button {
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 img {
@@ -51,7 +52,6 @@ img {
   }
 
   .logo {
-
     .logo__wrap {
       width: 25px;
       padding: 10px;
@@ -59,7 +59,6 @@ img {
       border-radius: 50%;
       display: flex;
       justify-content: center;
-
     }
 
     .logo__wrap:hover {
@@ -74,7 +73,6 @@ img {
     cursor: pointer;
     user-select: none;
     border-radius: 40px;
-
   }
 
   .create {
@@ -127,6 +125,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .btn-bell svg:focus,
@@ -162,13 +161,12 @@ img {
   border-radius: 50%;
 }
 
-
 .btn-container .btn {
   width: 14px;
   padding: 5px;
 }
 
-.btn-container .btn-search-mobile{
+.btn-container .btn-search-mobile {
   display: none;
 }
 
@@ -216,23 +214,22 @@ img {
     justify-content: flex-end;
     flex-grow: 1;
   }
-  .btn-container .btn-search-mobile{
+  .btn-container .btn-search-mobile {
     display: block;
   }
-  .menu .logo .logo__wrap{
+  .menu .logo .logo__wrap {
     padding: 0;
-    margin-right: 10px;;
+    margin-right: 10px;
   }
-  .menu .menu-mobile-box{
+  .menu .menu-mobile-box {
     padding: 0;
   }
-  .menu .menu-mobile-box:after{
+  .menu .menu-mobile-box:after {
     top: 4px;
     right: 0;
   }
-  .btn-container button{
+  .btn-container button {
     width: 36px;
     height: 36px;
   }
 }
-
