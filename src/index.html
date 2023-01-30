@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="images/favicon.png" />
     <link rel="stylesheet" href="./scss/menu.scss" />
     <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="./scss/dropdown-list.scss" />
     <title>Pinterest</title>
   </head>
   <body>
@@ -124,6 +125,17 @@
               ></path>
             </svg>
           </button>
+                                                    <!-- Выпадающий список -->
+          <div id="drop-menu" class="dropdown">
+            <div class="dropdown-wrap">
+              <h3 class="dropdown-text">Выпадающий список с выбором доски</h3>
+              <ul class="dropdown-item">
+                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 1</a></li
+                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 2</a></li
+                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 3</a></li
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -964,5 +976,6 @@
       </div>
     </section>
     <script type="module" src="js/script.js"></script>
+    <script src="js/dropdown-list.js"></script>
   </body>
 </html>
