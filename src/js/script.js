@@ -1,6 +1,11 @@
 import { generateCards } from './genCards';
 import { searchPin } from './searchPinterest';
 import { downloadOnScreen } from './download';
+import { eventt } from './ut-modal';
+import { reportshow } from './ut-modal';
+import { dropshow } from './ut-modal';
+import { addshow } from './ut-modal';
+
 
 const searchForm = document.querySelector('.search-bar');
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./scss/menu.scss" />
     <link rel="stylesheet" href="./scss/main.scss" />
     <link rel="stylesheet" href="./scss/dropdown-list.scss" />
+    <link rel="stylesheet" href="./scss/modal-complain.scss">
     <title>Pinterest</title>
   </head>
   <body>
@@ -130,9 +131,9 @@
             <div class="dropdown-wrap">
               <h3 class="dropdown-text">Выпадающий список с выбором доски</h3>
               <ul class="dropdown-item">
-                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 1</a></li
-                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 2</a></li
-                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 3</a></li
+                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 1</a></li>
+                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 2</a></li>
+                <li class="dropdown-list"><a href="#" class="dropdown-link">Доска 3</a></li>
               </ul>
             </div>
           </div>
@@ -974,6 +975,174 @@
           </div>
         </div>
       </div>
+      <form class="ut-popup">
+        <div class="ut-popup-box">
+            <div class="ut-popup-inner">
+                <div class="ut-popup-top">
+                    <h3 class="ut-popup-title">Жалоба на пин</h3>
+                </div>
+                <div class="ut-popup-center">
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="spam">
+                            <label class="ut-popup-items__cause-label" for="spam">Спам</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">Вводящие в заблуждение или повторяющиеся публикации</div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="nudity">
+                            <label class="ut-popup-items__cause-label" for="nudity">Изображения обнаженного тела или порнография</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Содержимое сексуального характера</div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="self-harm">
+                            <label class="ut-popup-items__cause-label" for="self-harm">Членовредительство</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Расстройства пищевого поведения, нанесение травм себе, суицид
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="misinformation">
+                            <label class="ut-popup-items__cause-label" for="misinformation">Ложная информация</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Ложная информация о здоровье, климате, голосованиях или теории заговора
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="hate-speech">
+                            <label class="ut-popup-items__cause-label" for="hate-speech">Агрессивные действия</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Предрассудки, стереотипы, идея превосходства белой расы, оскорбления
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="dangerous-goods">
+                            <label class="ut-popup-items__cause-label" for="dangerous-goods">Опасные товары</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Наркотики, оружие, регулируемые товары
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="attacks">
+                            <label class="ut-popup-items__cause-label" for="attacks">Преследование или критика</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Оскорбления, угрозы, изображения обнаженного тела, опубликованные без разрешения
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="graphic-violence">
+                            <label class="ut-popup-items__cause-label" for="graphic-violence">Сцены насилия</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Графическое изображение или пропаганда насилия
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="privacy-violation">
+                            <label class="ut-popup-items__cause-label" for="privacy-violation">Нарушение конфиденциальности</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                личные фотографии, персональная информация
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ut-popup-items">
+                        <div class="ut-popup-items__check">
+                            <input class="ut-popup-items__check-inp" name="appeal" type="radio" id="intellectual-property">
+                            <label class="ut-popup-items__cause-label" for="intellectual-property">Это моя интеллектуальная собственность</label>
+                        </div>
+                        <div class="ut-popup-items__cause">
+                            <div class="ut-popup-items__cause-text">
+                                Нарушение авторских прав или прав на товарный знак
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ut-popup-bottom">
+                    <button class="ut-popup__cancel-btn">
+                        Отмена
+                    </button>
+                    <button class="ut-popup__next-btn">
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+
+
+    <form class="ut-table">
+      <div class="ut-table-box">
+          <div class="ut-table-inner">
+              <div class="ut-table-top">
+                  <h3 class="ut-table-title">Добавить на доску</h3>
+              </div>
+              <div class="ut-table-center">
+                  <div class="ut-table-items">
+                      <div class="ut-table-items__check">
+                          <input class="ut-table-items__check-inp" name="appeal" type="radio" id="spam">
+                          <label class="ut-table-items__cause-label" for="spam">Доска 1</label>
+                      </div>
+                  </div>
+                  <div class="ut-table-items">
+                      <div class="ut-table-items__check">
+                          <input class="ut-table-items__check-inp" name="appeal" type="radio" id="nudity">
+                          <label class="ut-table-items__cause-label" for="nudity">Доска 2</label>
+                      </div>
+                    </div>
+                    <div class="ut-table-items">
+                      <div class="ut-table-items__check">
+                          <input class="ut-table-items__check-inp" name="appeal" type="radio" id="self-harm">
+                          <label class="ut-table-items__cause-label" for="self-harm">Доска 3</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </form>
+                  
+    <div class="dropdown-content" id="myDropdown">
+      <div class="dropdown-button">
+      <div class="dropdown-item">
+      <div class="dropdown-list"><a class="dropdown-content__add">Добавить на доску</a></div>
+      <div class="dropdown-list"><a class="dropdown-content__report">Пожаловаться</a></div>
+      </div>
+
+    </div>
+    </div>
     </section>
     <script type="module" src="js/script.js"></script>
     <script src="js/dropdown-list.js"></script>
