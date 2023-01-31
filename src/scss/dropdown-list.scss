@@ -11,10 +11,11 @@
   position: absolute;
   top: 65px;
   right: 0;
+  padding: 10px 15px;
 }
 .dropdown-text {
   color: rgb(7, 7, 7);
-  padding: 10px 15px;
+
   text-align: center;
 }
 .dropdown-link {
@@ -37,4 +38,5 @@
 }
 .dropdown-list {
   font-size: 16px;
+  list-style-type: none;
 }
