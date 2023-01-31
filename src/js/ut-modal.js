@@ -34,7 +34,6 @@ window.addEventListener('click', e => {
     const target = e.target
     if (!target.closest('.ut-table-box') && !target.closest('.dropdown-content__add')) {
         modalWindowAdd.classList.remove('js-showw');
-        document.body.classList.remove('lock');
     }
 })
 
