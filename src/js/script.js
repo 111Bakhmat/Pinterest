@@ -15,6 +15,7 @@ let cardMedium = document.querySelectorAll('.card_medium');
 let cardLarge = document.querySelectorAll('.card_large');
 let download = document.querySelectorAll('.bottom-bar__link-download');
 let AllCards = document.querySelectorAll('.card');
+let downloadPic;
 
 
 async function showPicture() {
@@ -26,11 +27,12 @@ async function showPicture() {
     let response = await fetch('https://63c6e145d307b7696743082f.mockapi.io/pic');
 
     let picture = await response.json();
+    downloadPic = picture;
 
 
     // отображаем фотографии
     for(let i = imgNum; i < imgNum + 5; i++){
-        cardSmall[jSmall].style.backgroundImage = `url('${picture[i].image} + ?random=${i}')`;
+        cardSmall[jSmall].style.backgroundImage = `url('${picture[i].image} + ?lock=${i}')`;
         cardSmall[jSmall].id = picture[i].id;
         cardSmall[jSmall].querySelector('.bottom-bar__link-download').id = picture[i].id;
         cardSmall[jSmall].querySelector('.bottom-bar__link-web').textContent = picture[i].hashTag;
@@ -42,7 +44,7 @@ async function showPicture() {
     imgNum = InitImg + 1;
     
     for(let i = imgNum; i < imgNum + 7; i++){
-        cardMedium[jMedium].style.backgroundImage = `url('${picture[i].image} + ?random=${i}')`;
+        cardMedium[jMedium].style.backgroundImage = `url('${picture[i].image} + ?lock=${i}')`;
         cardMedium[jMedium].id = picture[i].id;
         cardMedium[jMedium].querySelector('.bottom-bar__link-download').id = picture[i].id;
         cardMedium[jMedium].querySelector('.bottom-bar__link-web').textContent = picture[i].hashTag;
@@ -54,7 +56,7 @@ async function showPicture() {
     imgNum = InitImg + 1;
 
     for(let i = imgNum; i < imgNum + 4; i++){
-        cardLarge[jLarge].style.backgroundImage = `url('${picture[i].image} + ?random=${i}')`;
+        cardLarge[jLarge].style.backgroundImage = `url('${picture[i].image} + ?lock=${i}')`;
         cardLarge[jLarge].id = picture[i].id;
         cardLarge[jLarge].querySelector('.bottom-bar__link-download').id = picture[i].id;
         cardLarge[jLarge].querySelector('.bottom-bar__link-web').textContent = picture[i].hashTag;
@@ -64,9 +66,10 @@ async function showPicture() {
     };
 
     imgNum = InitImg + 1;
-
 };
+
 showPicture();
+
 let wasUsedScroll = true;
 let wasUsedScrollNumber = 1;
 async function scrollWindow() {
@@ -81,8 +84,6 @@ async function scrollWindow() {
         showPicture()
     };
 }
-
-
 document.addEventListener('scroll', scrollWindow);
 searchForm.addEventListener('input', () => searchPin(searchForm, cardSmall, cardMedium, cardLarge));
-document.addEventListener('click', (e) => downloadOnScreen(e)(download, AllCards));
+document.addEventListener('click', (e) => downloadOnScreen(e)(download, AllCards, downloadPic));
