@@ -23,7 +23,7 @@ cardsSmall.innerHTML = `
                         fill="#111111" stroke-width="0px"></path>
                 </svg>
             </a>
-            <a class="bottom-bar__link-more" href="#">
+            <a class="bottom-bar__link-more">
                 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                     class="gUZ R19 U9O kVc" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
                     aria-label="" role="img">
@@ -61,7 +61,7 @@ cardsMedium.innerHTML = `
                                   fill="#111111" stroke-width="0px"></path>
                         </svg>
                     </a>
-                    <a class="bottom-bar__link-more" href="#">
+                    <a class="bottom-bar__link-more">
                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                              class="gUZ R19 U9O kVc" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
                              aria-label="" role="img">
@@ -99,7 +99,7 @@ cardsLarge.innerHTML = `
                             fill="#111111" stroke-width="0px"></path>
                         </svg>
                 </a>
-                <a class="bottom-bar__link-more" href="#">
+                <a class="bottom-bar__link-more">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                         class="gUZ R19 U9O kVc" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
                         aria-label="" role="img">
