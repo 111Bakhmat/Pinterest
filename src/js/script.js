@@ -6,6 +6,13 @@ import { reportshow } from './ut-modal';
 import { dropshow } from './ut-modal';
 import { addshow } from './ut-modal';
 
+const localSt = {
+    localSt2: [],
+    localSt3: []
+}
+localSt.localSt2 = JSON.parse(localStorage.getItem('desk2'))??[];
+localSt.localSt3 = JSON.parse(localStorage.getItem('desk3'))??[];
+
 
 const searchForm = document.querySelector('.search-bar');
 
@@ -72,8 +79,10 @@ async function showPicture() {
 
 };
 showPicture();
+
 let wasUsedScroll = true;
 let wasUsedScrollNumber = 1;
+
 async function scrollWindow() {
     if (wasUsedScroll){
         wasUsedScroll = false;
@@ -88,6 +97,69 @@ async function scrollWindow() {
 }
 
 
+
+
+const modalWindow = document.createElement('div');
+modalWindow.innerHTML = `
+<div class="dropdown-content" id="myDropdown">
+<div class="dropdown-button">
+<div class="dropdown-item">
+<div class="dropdown-list"><a class="dropdown-content__add">Добавить на доску</a></div>
+<div class="dropdown-list"><a class="dropdown-content__report">Пожаловаться</a></div>
+</div></div></div>
+`
+
+
+
+function bottomBar(eventt){
+    if (eventt.target.closest('.bottom-bar__link-more')){
+        modalWindow.style.display = 'block';
+        eventt.target.parentNode.parentNode.parentNode.parentNode.append(modalWindow);
+    } else {
+        modalWindow.style.display = 'none';
+    }
+};
+
+modalWindow.querySelector('.dropdown-content__add').addEventListener('click', () => {
+    document.querySelector('.ut-table').classList.add('js-showw');
+});
+
+document.querySelector('.ut-table-items2').addEventListener('click', () => {
+    if (JSON.parse(localStorage.getItem('desk2'))?.indexOf(modalWindow.parentNode.id)??-1 === -1) {
+        localSt.localSt2.push(modalWindow.parentNode.id);
+        localStorage.setItem('desk2' , JSON.stringify(localSt.localSt2));
+    }
+    document.querySelector('.ut-table').classList.remove('js-showw');
+} );
+
+document.querySelector('.ut-table-items3').addEventListener('click', () => {
+    if (JSON.parse(localStorage.getItem('desk3'))?.indexOf(modalWindow.parentNode.id)??-1 === -1){
+        localSt.localSt3.push(modalWindow.parentNode.id);
+        localStorage.setItem('desk3' , JSON.stringify(localSt.localSt3));
+    }
+    document.querySelector('.ut-table').classList.remove('js-showw');
+} );
+
+modalWindow.querySelector('.dropdown-content__report').addEventListener('click', () => {
+    document.querySelector('.ut-popup').classList.add('js-show');
+});
+
+document.querySelector('.ut-popup__cancel-btn').addEventListener('click', () => {
+    document.querySelector('.ut-popup').classList.remove('js-show');
+    preventDefault();
+});
+
+document.querySelector('.ut-popup__next-btn').addEventListener('click', () => {
+    document.querySelector('.ut-popup').classList.remove('js-show');
+    alert('жалоба отправлена');
+    preventDefault();
+});
+
+
+document.addEventListener('click', bottomBar); 
 document.addEventListener('scroll', scrollWindow);
 searchForm.addEventListener('input', () => searchPin(searchForm, cardSmall, cardMedium, cardLarge));
 document.addEventListener('click', (e) => downloadOnScreen(e)(download, AllCards));
+
+
+export { scrollWindow,showPicture };

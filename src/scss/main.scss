@@ -35,6 +35,7 @@
   }
 
   .card_small {
+    position: relative;
     grid-row-end: span var(--card_small);
     // background-image: url(https://picsum.photos/id/237/300);
     background-size: cover;
@@ -42,6 +43,7 @@
   }
 
   .card_medium {
+    position: relative;
     grid-row-end: span var(--card_medium);
     // background-image: url(https://picsum.photos//300?grayscale);
     background-size: cover;
@@ -49,6 +51,7 @@
   }
 
   .card_large {
+    position: relative;
     grid-row-end: span var(--card_large);
     // background-image: url(https://picsum.photos/237/300);
     background-size: cover;

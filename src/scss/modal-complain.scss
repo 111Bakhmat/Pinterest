@@ -3,6 +3,8 @@ body.lock{
   overflow: hidden;
 }
 
+
+
 .ut-popup {
   display: none;
 }
@@ -305,6 +307,9 @@ body.lock{
   pointer-events: none;
 }
 
+.dropdown-content {
+  width: 100%;
+}
 
 @media (max-width: 576px) {
   .ut-popup-center{
@@ -315,7 +320,10 @@ body.lock{
 
 
 .dropdown-content {
-  display: none;
+  position: absolute;
+  left:0;
+  bottom:0;
+  z-index: 300;
   }
 
 .dropdown-button{
@@ -325,9 +333,7 @@ body.lock{
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left:100px;
-  top:300px;
+  
   
 }
 
